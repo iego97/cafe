@@ -8,8 +8,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewControllerInicio: UIViewController {
 
+    @IBOutlet weak var txtUsuario: UITextField!
+    @IBOutlet weak var txtPassword: UITextField!
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+    @IBAction func doTapLogin(_ sender: Any) {
+        if txtUsuario.text && txtPassword != nil
+        {
+            segue.destination as! ViewControllerProductos
+        }else{
+            
+        }
+      }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

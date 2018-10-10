@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		3D8CEB48216E4C7000FC7597 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8CEB47216E4C7000FC7597 /* AppDelegate.swift */; };
-		3D8CEB4A216E4C7000FC7597 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8CEB49216E4C7000FC7597 /* ViewController.swift */; };
+		3D8CEB4A216E4C7000FC7597 /* ViewControllerInicio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8CEB49216E4C7000FC7597 /* ViewControllerInicio.swift */; };
 		3D8CEB4D216E4C7000FC7597 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D8CEB4B216E4C7000FC7597 /* Main.storyboard */; };
 		3D8CEB4F216E4C7F00FC7597 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D8CEB4E216E4C7F00FC7597 /* Assets.xcassets */; };
 		3D8CEB52216E4C7F00FC7597 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D8CEB50216E4C7F00FC7597 /* LaunchScreen.storyboard */; };
 		3D8CEB5D216E4C7F00FC7597 /* Los_AlamosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8CEB5C216E4C7F00FC7597 /* Los_AlamosTests.swift */; };
 		3D8CEB68216E4C7F00FC7597 /* Los_AlamosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8CEB67216E4C7F00FC7597 /* Los_AlamosUITests.swift */; };
+		3D8CEB79216E524100FC7597 /* ViewControllerProductos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8CEB78216E524100FC7597 /* ViewControllerProductos.swift */; };
+		3D8CEB7C216E532200FC7597 /* Productos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8CEB7B216E532200FC7597 /* Productos.swift */; };
+		3D8CEB7E216E541300FC7597 /* Comentario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8CEB7D216E541300FC7597 /* Comentario.swift */; };
+		3D8CEB80216E572000FC7597 /* Datos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8CEB7F216E572000FC7597 /* Datos.swift */; };
+		3D8CEB82216E636600FC7597 /* CeldaProducto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8CEB81216E636600FC7597 /* CeldaProducto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +41,7 @@
 /* Begin PBXFileReference section */
 		3D8CEB44216E4C7000FC7597 /* Los Alamos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Los Alamos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D8CEB47216E4C7000FC7597 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3D8CEB49216E4C7000FC7597 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3D8CEB49216E4C7000FC7597 /* ViewControllerInicio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInicio.swift; sourceTree = "<group>"; };
 		3D8CEB4C216E4C7000FC7597 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D8CEB4E216E4C7F00FC7597 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D8CEB51216E4C7F00FC7597 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +52,11 @@
 		3D8CEB63216E4C7F00FC7597 /* Los AlamosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Los AlamosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D8CEB67216E4C7F00FC7597 /* Los_AlamosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Los_AlamosUITests.swift; sourceTree = "<group>"; };
 		3D8CEB69216E4C7F00FC7597 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D8CEB78216E524100FC7597 /* ViewControllerProductos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerProductos.swift; sourceTree = "<group>"; };
+		3D8CEB7B216E532200FC7597 /* Productos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Productos.swift; sourceTree = "<group>"; };
+		3D8CEB7D216E541300FC7597 /* Comentario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comentario.swift; sourceTree = "<group>"; };
+		3D8CEB7F216E572000FC7597 /* Datos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Datos.swift; sourceTree = "<group>"; };
+		3D8CEB81216E636600FC7597 /* CeldaProducto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaProducto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +107,11 @@
 		3D8CEB46216E4C7000FC7597 /* Los Alamos */ = {
 			isa = PBXGroup;
 			children = (
-				3D8CEB47216E4C7000FC7597 /* AppDelegate.swift */,
-				3D8CEB49216E4C7000FC7597 /* ViewController.swift */,
-				3D8CEB4B216E4C7000FC7597 /* Main.storyboard */,
+				3D8CEB7A216E530000FC7597 /* Models */,
+				3D8CEB76216E4F8700FC7597 /* views */,
+				3D8CEB77216E4FAB00FC7597 /* viewControllers */,
+				3D8CEB75216E4F6800FC7597 /* app */,
 				3D8CEB4E216E4C7F00FC7597 /* Assets.xcassets */,
-				3D8CEB50216E4C7F00FC7597 /* LaunchScreen.storyboard */,
-				3D8CEB53216E4C7F00FC7597 /* Info.plist */,
 			);
 			path = "Los Alamos";
 			sourceTree = "<group>";
@@ -123,6 +132,44 @@
 				3D8CEB69216E4C7F00FC7597 /* Info.plist */,
 			);
 			path = "Los AlamosUITests";
+			sourceTree = "<group>";
+		};
+		3D8CEB75216E4F6800FC7597 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				3D8CEB47216E4C7000FC7597 /* AppDelegate.swift */,
+				3D8CEB53216E4C7F00FC7597 /* Info.plist */,
+			);
+			name = app;
+			sourceTree = "<group>";
+		};
+		3D8CEB76216E4F8700FC7597 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				3D8CEB50216E4C7F00FC7597 /* LaunchScreen.storyboard */,
+				3D8CEB4B216E4C7000FC7597 /* Main.storyboard */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		3D8CEB77216E4FAB00FC7597 /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3D8CEB49216E4C7000FC7597 /* ViewControllerInicio.swift */,
+				3D8CEB78216E524100FC7597 /* ViewControllerProductos.swift */,
+				3D8CEB81216E636600FC7597 /* CeldaProducto.swift */,
+			);
+			name = viewControllers;
+			sourceTree = "<group>";
+		};
+		3D8CEB7A216E530000FC7597 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3D8CEB7B216E532200FC7597 /* Productos.swift */,
+				3D8CEB7D216E541300FC7597 /* Comentario.swift */,
+				3D8CEB7F216E572000FC7597 /* Datos.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +303,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D8CEB4A216E4C7000FC7597 /* ViewController.swift in Sources */,
+				3D8CEB4A216E4C7000FC7597 /* ViewControllerInicio.swift in Sources */,
+				3D8CEB7C216E532200FC7597 /* Productos.swift in Sources */,
 				3D8CEB48216E4C7000FC7597 /* AppDelegate.swift in Sources */,
+				3D8CEB79216E524100FC7597 /* ViewControllerProductos.swift in Sources */,
+				3D8CEB7E216E541300FC7597 /* Comentario.swift in Sources */,
+				3D8CEB80216E572000FC7597 /* Datos.swift in Sources */,
+				3D8CEB82216E636600FC7597 /* CeldaProducto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
