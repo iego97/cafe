@@ -15,7 +15,19 @@ class ViewControllerProductos : UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        
+        let celda = tableView.dequeueReusableCell(withIdentifier: "celdaProducto") as!CeldaProducto
+        
+        celda.imageViewAgregar.image = UIImage(named: "add")
+        celda.imageViewInfo.image = UIImage(named: "info")
+        celda.imageViewProducto.image = Datos.productos[indexPath.row].imagenProducto
+        celda.lblNombreProducto.text = Datos.productos[indexPath.row].nombreProducto
+        
+        return celda
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
     }
     
     

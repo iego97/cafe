@@ -13,17 +13,15 @@ class ViewControllerInicio: UIViewController {
     @IBOutlet weak var txtUsuario: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
     @IBAction func doTapLogin(_ sender: Any) {
-        if txtUsuario.text && txtPassword != nil
+        if (txtUsuario.text != nil) && (txtPassword.text != nil)
         {
-            segue.destination as! ViewControllerProductos
+           performSegue(withIdentifier: "goToMenu", sender: self)
         }else{
             
         }
-      }
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

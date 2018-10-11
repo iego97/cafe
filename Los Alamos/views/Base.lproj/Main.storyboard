@@ -14,7 +14,6 @@
         <!--View Controller Inicio-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewControllerInicio" customModule="Los_Alamos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -39,8 +38,7 @@
                                 <rect key="frame" x="168" y="422" width="38" height="30"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <action selector="doTapLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sBv-We-zj1"/>
-                                    <segue destination="s1Q-mb-imK" kind="show" id="F81-pu-5ZA"/>
+                                    <action selector="doTapLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jZD-yS-0Wy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -65,8 +63,10 @@
                     <connections>
                         <outlet property="txtPassword" destination="WKA-mM-qed" id="YNH-IU-Emu"/>
                         <outlet property="txtUsuario" destination="wcy-ZZ-ZZn" id="kny-XC-4WU"/>
+                        <segue destination="s1Q-mb-imK" kind="show" identifier="goToMenu" id="pwh-Vh-ieQ"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-391.19999999999999" y="70.614692653673174"/>
         </scene>
@@ -116,31 +116,69 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="104" id="gM8-eR-mze">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celdaProducto" rowHeight="104" id="gM8-eR-mze" customClass="CeldaProducto" customModule="Los_Alamos" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="104"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gM8-eR-mze" id="Inr-sp-TLc">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="103.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rLC-ei-au8">
-                                                    <rect key="frame" x="0.0" y="0.0" width="230" height="103.5"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S8U-Lg-63U" userLabel="info">
+                                                    <rect key="frame" x="300" y="0.0" width="75" height="103.5"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oMI-1D-8NC">
-                                                    <rect key="frame" x="228" y="0.0" width="74" height="103.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oMI-1D-8NC" userLabel="agregarr">
+                                                    <rect key="frame" x="225" y="0.0" width="75" height="103.5"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S8U-Lg-63U">
-                                                    <rect key="frame" x="302" y="0.0" width="73" height="103.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rLC-ei-au8" userLabel="imagen producto">
+                                                    <rect key="frame" x="0.0" y="0.0" width="225" height="103.5"/>
                                                 </imageView>
+                                                <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wMn-re-yYr">
+                                                    <rect key="frame" x="0.0" y="0.0" width="225" height="103.5"/>
+                                                    <color key="backgroundColor" red="0.21039102979274615" green="0.21039102979274615" blue="0.21039102979274615" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4Z-sk-dAe">
+                                                    <rect key="frame" x="14" y="33" width="196" height="37"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="oMI-1D-8NC" firstAttribute="leading" secondItem="wMn-re-yYr" secondAttribute="trailing" id="Lpg-y5-qdX"/>
+                                                <constraint firstItem="oMI-1D-8NC" firstAttribute="leading" secondItem="rLC-ei-au8" secondAttribute="trailing" id="NsK-7V-dQy"/>
+                                                <constraint firstAttribute="bottom" secondItem="d4Z-sk-dAe" secondAttribute="bottom" constant="33.5" id="SU7-xY-msY"/>
+                                                <constraint firstItem="S8U-Lg-63U" firstAttribute="top" secondItem="Inr-sp-TLc" secondAttribute="top" id="Saq-bD-K8T"/>
+                                                <constraint firstItem="wMn-re-yYr" firstAttribute="leading" secondItem="Inr-sp-TLc" secondAttribute="leading" id="UWB-hu-IJ0"/>
+                                                <constraint firstItem="wMn-re-yYr" firstAttribute="top" secondItem="Inr-sp-TLc" secondAttribute="top" id="VcT-aZ-9cq"/>
+                                                <constraint firstItem="oMI-1D-8NC" firstAttribute="width" secondItem="Inr-sp-TLc" secondAttribute="width" multiplier="0.2" id="X6d-nf-xHt"/>
+                                                <constraint firstItem="d4Z-sk-dAe" firstAttribute="top" secondItem="Inr-sp-TLc" secondAttribute="top" constant="33" id="XVq-DY-YZv"/>
+                                                <constraint firstAttribute="bottom" secondItem="rLC-ei-au8" secondAttribute="bottom" id="a48-rt-ubI"/>
+                                                <constraint firstAttribute="trailing" secondItem="S8U-Lg-63U" secondAttribute="trailing" id="bcj-jn-3kC"/>
+                                                <constraint firstItem="rLC-ei-au8" firstAttribute="leading" secondItem="Inr-sp-TLc" secondAttribute="leading" id="dGN-rS-m2D"/>
+                                                <constraint firstItem="rLC-ei-au8" firstAttribute="width" secondItem="Inr-sp-TLc" secondAttribute="width" multiplier="0.6" id="fNZ-0c-9Lj"/>
+                                                <constraint firstItem="oMI-1D-8NC" firstAttribute="leading" secondItem="d4Z-sk-dAe" secondAttribute="trailing" constant="15" id="fOG-k4-Ebu"/>
+                                                <constraint firstItem="S8U-Lg-63U" firstAttribute="width" secondItem="Inr-sp-TLc" secondAttribute="width" multiplier="0.2" id="gSU-4b-CyS"/>
+                                                <constraint firstItem="oMI-1D-8NC" firstAttribute="top" secondItem="Inr-sp-TLc" secondAttribute="top" id="gzg-TT-wrv"/>
+                                                <constraint firstItem="rLC-ei-au8" firstAttribute="top" secondItem="Inr-sp-TLc" secondAttribute="top" id="iiD-db-Q25"/>
+                                                <constraint firstItem="S8U-Lg-63U" firstAttribute="leading" secondItem="oMI-1D-8NC" secondAttribute="trailing" id="ksW-se-vRK"/>
+                                                <constraint firstItem="d4Z-sk-dAe" firstAttribute="leading" secondItem="Inr-sp-TLc" secondAttribute="leading" constant="14" id="qbf-mN-eev"/>
+                                                <constraint firstAttribute="bottom" secondItem="S8U-Lg-63U" secondAttribute="bottom" id="ulQ-Mi-DMM"/>
+                                                <constraint firstAttribute="bottom" secondItem="oMI-1D-8NC" secondAttribute="bottom" id="wox-b9-8ho"/>
+                                                <constraint firstAttribute="bottom" secondItem="wMn-re-yYr" secondAttribute="bottom" id="ybq-V3-gd4"/>
+                                            </constraints>
                                         </tableViewCellContentView>
-                                        <constraints>
-                                            <constraint firstItem="rLC-ei-au8" firstAttribute="width" secondItem="gM8-eR-mze" secondAttribute="width" multiplier="0.6" id="MfC-sf-XaJ"/>
-                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageViewAgregar" destination="oMI-1D-8NC" id="rbl-mf-dSp"/>
+                                            <outlet property="imageViewInfo" destination="S8U-Lg-63U" id="D3O-Kh-1sb"/>
+                                            <outlet property="imageViewProducto" destination="rLC-ei-au8" id="zRc-gf-xcN"/>
+                                            <outlet property="lblNombreProducto" destination="d4Z-sk-dAe" id="Quk-qn-vaj"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="FaX-Dz-Kml" id="Cn0-GF-p6L"/>
+                                    <outlet property="delegate" destination="FaX-Dz-Kml" id="OUB-qN-OXC"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -157,6 +195,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WuE-My-eIR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2293.5999999999999" y="-600.44977511244383"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MZr-AX-FVd">
+            <objects>
+                <viewController id="b3d-66-qxB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AcF-J7-V9w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="zUa-md-Xma"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JtD-Lw-47Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3148" y="-600"/>
         </scene>
     </scenes>
 </document>

@@ -11,5 +11,8 @@ import UIKit
 
 class CeldaProducto : UITableViewCell
 {
-    
+    @IBOutlet weak var imageViewProducto: UIImageView!
+    @IBOutlet weak var imageViewAgregar: UIImageView!
+    @IBOutlet weak var imageViewInfo: UIImageView!
+    @IBOutlet weak var lblNombreProducto: UILabel!
 }
