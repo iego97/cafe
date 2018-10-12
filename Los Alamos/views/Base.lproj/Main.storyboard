@@ -543,6 +543,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJx-7G-1mA">
                                 <rect key="frame" x="153" y="539" width="69" height="30"/>
                                 <state key="normal" title="Confirmar"/>
+                                <connections>
+                                    <action selector="doTapAgregarCarrito:" destination="jrF-M4-3Xi" eventType="touchUpInside" id="lkZ-Ls-Q7r"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -593,6 +596,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZOn-mB-nGF"/>
                     </view>
+                    <connections>
+                        <outlet property="imgProductoComplemento" destination="YZh-8y-wsF" id="qgu-6A-t0B"/>
+                        <outlet property="lblCantidadAzucar" destination="095-yB-ynL" id="OqJ-7d-1PP"/>
+                        <outlet property="switchAzucar" destination="eeQ-Xf-3Ba" id="Lsj-dS-MMv"/>
+                        <outlet property="switchCanela" destination="ytR-Uz-hjq" id="5Wy-VO-xTl"/>
+                        <outlet property="switchStevia" destination="GKQ-wZ-AFf" id="d7O-tR-fi5"/>
+                        <outlet property="switchVainilla" destination="Hrk-Qi-doo" id="YoL-L5-sjo"/>
+                        <outlet property="tapperAzucar" destination="2Gd-ua-wRC" id="0mJ-Lc-Nx4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="prf-n7-zkG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
