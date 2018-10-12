@@ -12,18 +12,20 @@ import UIKit
 class Productos{
     
     var nombreProducto : String?
-    var precio : Int?
+    var precio : Double?
     var imagenProducto : UIImage?
     var descripcion : String?
     var comentarios: [Comentario?] = []
+    var calificacion : Int?
     
-    init(nombre : String, precio : Int, imagen : UIImage, descripcion : String, comentarios:[Comentario])
+    init(nombre : String, precio : Double, imagen : UIImage, descripcion : String, comentarios:[Comentario], calificacion : Int)
     {
         self.nombreProducto = nombre
         self.precio = precio
         self.imagenProducto = imagen
         self.descripcion = descripcion
         self.comentarios = comentarios
+        self.calificacion = calificacion
         
     }
     
