@@ -15,10 +15,10 @@ class Productos{
     var precio : Double?
     var imagenProducto : UIImage?
     var descripcion : String?
-    var comentarios: [Comentario?] = []
+    var comentarios: [Comentario] = []
     var calificacion : Int?
     
-    init(nombre : String, precio : Double, imagen : UIImage, descripcion : String, comentarios:[Comentario], calificacion : Int)
+    init(nombre : String, precio : Double, imagen : UIImage, descripcion : String?, comentarios:[Comentario], calificacion : Int)
     {
         self.nombreProducto = nombre
         self.precio = precio

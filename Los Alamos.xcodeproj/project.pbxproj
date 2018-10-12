@@ -23,6 +23,9 @@
 		3D8CEB80216E572000FC7597 /* Datos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8CEB7F216E572000FC7597 /* Datos.swift */; };
 		3D8CEB82216E636600FC7597 /* CeldaProducto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8CEB81216E636600FC7597 /* CeldaProducto.swift */; };
 		3DB0266821708D5E00FA0B8D /* DetalleProducto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB0266721708D5E00FA0B8D /* DetalleProducto.swift */; };
+		3DDC22FC2170C52700A96592 /* Carrito.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDC22FB2170C52700A96592 /* Carrito.swift */; };
+		3DDC22FE2170C5D200A96592 /* Complemento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDC22FD2170C5D200A96592 /* Complemento.swift */; };
+		3DDC23002170C7C100A96592 /* AgregarComplementos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDC22FF2170C7C100A96592 /* AgregarComplementos.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,9 @@
 		3D8CEB7F216E572000FC7597 /* Datos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Datos.swift; sourceTree = "<group>"; };
 		3D8CEB81216E636600FC7597 /* CeldaProducto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaProducto.swift; sourceTree = "<group>"; };
 		3DB0266721708D5E00FA0B8D /* DetalleProducto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleProducto.swift; sourceTree = "<group>"; };
+		3DDC22FB2170C52700A96592 /* Carrito.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carrito.swift; sourceTree = "<group>"; };
+		3DDC22FD2170C5D200A96592 /* Complemento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Complemento.swift; sourceTree = "<group>"; };
+		3DDC22FF2170C7C100A96592 /* AgregarComplementos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgregarComplementos.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +176,7 @@
 				3D7B08F72170B25C003B6EA5 /* AgregarComentario.swift */,
 				3D7B08F92170B268003B6EA5 /* ListaComentario.swift */,
 				3D7B08FB2170B730003B6EA5 /* CeldaComentario.swift */,
+				3DDC22FF2170C7C100A96592 /* AgregarComplementos.swift */,
 			);
 			name = viewControllers;
 			sourceTree = "<group>";
@@ -180,6 +187,8 @@
 				3D8CEB7B216E532200FC7597 /* Productos.swift */,
 				3D8CEB7D216E541300FC7597 /* Comentario.swift */,
 				3D8CEB7F216E572000FC7597 /* Datos.swift */,
+				3DDC22FB2170C52700A96592 /* Carrito.swift */,
+				3DDC22FD2170C5D200A96592 /* Complemento.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -318,11 +327,14 @@
 				3D7B08FC2170B730003B6EA5 /* CeldaComentario.swift in Sources */,
 				3D8CEB4A216E4C7000FC7597 /* ViewControllerInicio.swift in Sources */,
 				3D8CEB7C216E532200FC7597 /* Productos.swift in Sources */,
+				3DDC23002170C7C100A96592 /* AgregarComplementos.swift in Sources */,
+				3DDC22FE2170C5D200A96592 /* Complemento.swift in Sources */,
 				3D8CEB48216E4C7000FC7597 /* AppDelegate.swift in Sources */,
 				3DB0266821708D5E00FA0B8D /* DetalleProducto.swift in Sources */,
 				3D7B08F82170B25C003B6EA5 /* AgregarComentario.swift in Sources */,
 				3D8CEB79216E524100FC7597 /* ViewControllerProductos.swift in Sources */,
 				3D7B08FA2170B268003B6EA5 /* ListaComentario.swift in Sources */,
+				3DDC22FC2170C52700A96592 /* Carrito.swift in Sources */,
 				3D8CEB7E216E541300FC7597 /* Comentario.swift in Sources */,
 				3D8CEB80216E572000FC7597 /* Datos.swift in Sources */,
 				3D8CEB82216E636600FC7597 /* CeldaProducto.swift in Sources */,

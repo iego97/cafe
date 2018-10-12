@@ -23,7 +23,11 @@ class ListaComentario : UIViewController, UITableViewDataSource, UITableViewDele
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let celda = tableView.dequeueReusableCell(withIdentifier: <#T##String#>)
+        let celda = tableView.dequeueReusableCell(withIdentifier: "celdaComentario") as! CeldaComentario
+        celda.lblUsuario.text = comentarios?[indexPath.row].usuario
+        celda.lblComentario.text = comentarios?[indexPath.row].comentario
+        
+        return celda
         
     }
     

@@ -91,7 +91,13 @@ class DetalleProducto : UIViewController{
             
         }else if segue.identifier == "goToAgregarComentario"
         {
-            
+            let destino = segue.destination as! AgregarComentario
+            destino.producto = producto
+        }
+        else if segue.identifier == "goToAgregarComplemento"
+        {
+            let destino = segue.destination as! AgregarComplementos
+            destino.producto = producto
         }
     }
     

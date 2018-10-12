@@ -1,5 +1,5 @@
 //
-//  CeldaComentario.swift
+//  AgregarComplementos.swift
 //  Los Alamos
 //
 //  Created by Alumno on 12/10/18.
@@ -9,10 +9,12 @@
 import Foundation
 import UIKit
 
-class CeldaComentario :UITableViewCell{
+class AgregarComplementos : UIViewController{
     
-    @IBOutlet weak var lblUsuario: UILabel!
-    @IBOutlet weak var lblComentario: UILabel!
+    var producto : Productos?
+    
+    var complementos : [Complemento] = []
+    
     
     
 }
