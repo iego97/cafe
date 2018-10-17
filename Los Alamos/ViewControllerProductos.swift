@@ -20,7 +20,7 @@ class ViewControllerProductos : UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let celda = tableView.dequeueReusableCell(withIdentifier: "celdaProducto") as!CeldaProducto
+        let celda = tableView.dequeueReusableCell(withIdentifier: "celdaProducto") as! CeldaProducto
         
         celda.imageViewProducto.image = Datos.productos[indexPath.row].imagenProducto
         celda.lblNombreProducto.text = Datos.productos[indexPath.row].nombreProducto

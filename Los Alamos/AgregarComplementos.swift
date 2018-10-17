@@ -34,6 +34,7 @@ class AgregarComplementos : UIViewController, UIPickerViewDataSource, UIPickerVi
     @IBAction func editingBegin(_ sender: Any) {
         pickerComplementos.isHidden = false
         btnAgregar.isHidden = false
+        lblPrecioProducto.isHidden = true
     }
     
     
@@ -41,8 +42,13 @@ class AgregarComplementos : UIViewController, UIPickerViewDataSource, UIPickerVi
         pickerComplementos.isHidden = true
         btnAgregar.isHidden = true
         txtPickerView.endEditing(true)
+        txtPickerView.text = nombreComplemento
         btnConfirmarComplemento.isHidden = false
-        cantidadComplementos = Int(stepperCantidad.value)
+        cantidadComplementos = stepperCantidad.value
+        lblPrecioProducto.isHidden = false
+        stepperCantidad.isHidden = false
+        lblCantidadComplementos.isHidden = false
+        btnConfirmarComplemento.isHidden = false
     }
     
     
@@ -54,6 +60,16 @@ class AgregarComplementos : UIViewController, UIPickerViewDataSource, UIPickerVi
     
     @IBAction func doTapConfirmarComplemento(_ sender: Any) {
         
+        stepperCantidad.isHidden = true
+        lblCantidadComplementos.isHidden = true
+        btnConfirmarComplemento.isHidden = true
+        lblComplementoAgregado.isHidden = false
+        txtPickerView.text = ""
+        
+        complementosCarrito.append(Complemento(nombre: nombreComplemento!, cantidad: cantidadComplementos!))
+        
+        
+       
         
     }
     
@@ -66,13 +82,12 @@ class AgregarComplementos : UIViewController, UIPickerViewDataSource, UIPickerVi
     @IBOutlet weak var stepperCantidad: UIStepper!
     @IBOutlet weak var txtPickerView: UITextField!
     @IBOutlet weak var btnConfirmarComplemento: UIButton!
-    
     @IBOutlet weak var lblComplementoAgregado: UILabel!
     
     var producto : Productos?
     var complementosCarrito : [Complemento] = []
     var carrito : Carrito?
-    var cantidadComplementos : Int?
+    var cantidadComplementos : Double?
     var nombreComplemento : String?
     
     
@@ -82,9 +97,11 @@ class AgregarComplementos : UIViewController, UIPickerViewDataSource, UIPickerVi
     
     override func viewDidLoad() {
         
+        
         let botonSiguiente = UIBarButtonItem(title: "Confirmar", style: .done, target: self, action: #selector(confirmar))
         
         self.navigationItem.rightBarButtonItem = botonSiguiente
+        
         
         imgProductoComplemento.image = producto?.imagenProducto
         lblPrecioProducto.text = producto?.precio?.description
@@ -95,7 +112,22 @@ class AgregarComplementos : UIViewController, UIPickerViewDataSource, UIPickerVi
     }
     
     @objc func confirmar(){
+        
+        
+        
         performSegue(withIdentifier: "goBackProductos", sender: self)
+        
+        carrito = Carrito(nombre: (producto?.nombreProducto)!, precio: (producto?.precio)!, complementos: complementosCarrito, imagen: (producto?.imagenProducto)!)
+        
+        
+
+        Datos.DatosCarrito.append(carrito!)
+        
+        
+       
+    
+        
+        
     }
     
 }
