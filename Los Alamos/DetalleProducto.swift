@@ -25,10 +25,15 @@ class DetalleProducto : UIViewController{
     @IBOutlet weak var lblUltimoUsuario: UILabel!
     @IBOutlet weak var lblUltimoComentario: UILabel!
     
-    @IBOutlet weak var imgAgregar: UIImageView!
+    
     
     
     override func viewDidLoad() {
+        
+        let botonAgregar = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(siguiente))
+        self.navigationItem.rightBarButtonItem = botonAgregar
+        
+        super.viewDidLoad()
         
         if producto?.calificacion == 1
         {
@@ -60,7 +65,7 @@ class DetalleProducto : UIViewController{
         imgDetalleProducto.image = producto?.imagenProducto
         
 
-        imgAgregar.image = UIImage(named: "add")
+       
         
         let precio = producto?.precio?.description
         lblPrecio.text = precio
@@ -94,11 +99,17 @@ class DetalleProducto : UIViewController{
             let destino = segue.destination as! AgregarComentario
             destino.producto = producto
         }
-        else if segue.identifier == "goToAgregarComplemento"
+        else if segue.identifier == "goToAgregarProducto"
         {
             let destino = segue.destination as! AgregarComplementos
             destino.producto = producto
         }
+    }
+    
+    @objc func siguiente(){
+        
+        performSegue(withIdentifier: "goToAgregarProducto", sender: self)
+        
     }
     
 }

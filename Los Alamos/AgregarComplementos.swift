@@ -9,52 +9,93 @@
 import Foundation
 import UIKit
 
-class AgregarComplementos : UIViewController{
+
+var complementos : [String] =  ["Azucar","Stevia","Canela","Tierra del congo"]
+
+class AgregarComplementos : UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
     
-    var producto : Productos?
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return complementos.count
+    }
     
-    var complementos : [Complemento] = []
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return "\(complementos[row])"
+    }
     
-    var carrito : Carrito?
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        nombreComplemento = complementos[row]
+    }
     
+    
+    
+    @IBAction func editingBegin(_ sender: Any) {
+        pickerComplementos.isHidden = false
+        btnAgregar.isHidden = false
+    }
+    
+    
+    @IBAction func doTapAgregarComplemeto(_ sender: Any) {
+        pickerComplementos.isHidden = true
+        btnAgregar.isHidden = true
+        txtPickerView.endEditing(true)
+        btnConfirmarComplemento.isHidden = false
+        cantidadComplementos = Int(stepperCantidad.value)
+    }
+    
+    
+    @IBAction func doTapAgregarCantidadComplemento(_ sender: Any) {
+        lblCantidadComplementos.text = stepperCantidad.value.description
+       
+    }
+    
+    
+    @IBAction func doTapConfirmarComplemento(_ sender: Any) {
+        
+        
+    }
     
     @IBOutlet weak var imgProductoComplemento: UIImageView!
     
-    @IBOutlet weak var switchAzucar: UISwitch!
-    @IBOutlet weak var switchStevia: UISwitch!
-    @IBOutlet weak var switchCanela: UISwitch!
-    @IBOutlet weak var switchVainilla: UISwitch!
+    @IBOutlet weak var lblPrecioProducto: UILabel!
+    @IBOutlet weak var lblCantidadComplementos: UILabel!
+    @IBOutlet weak var pickerComplementos: UIPickerView!
+    @IBOutlet weak var btnAgregar: UIButton!
+    @IBOutlet weak var stepperCantidad: UIStepper!
+    @IBOutlet weak var txtPickerView: UITextField!
+    @IBOutlet weak var btnConfirmarComplemento: UIButton!
+    
+    @IBOutlet weak var lblComplementoAgregado: UILabel!
+    
+    var producto : Productos?
+    var complementosCarrito : [Complemento] = []
+    var carrito : Carrito?
+    var cantidadComplementos : Int?
+    var nombreComplemento : String?
     
     
-    @IBOutlet weak var tapperAzucar: UIStepper!
     
-    @IBOutlet weak var lblCantidadAzucar: UILabel!
     
-    @IBAction func doTapAgregarCarrito(_ sender: Any) {
-        
-        carrito = Carrito(nombre: (producto?.nombreProducto)!, precio: (producto?.precio)!, complementos: complementos, imagen: (producto?.imagenProducto)!)
-        
-    }
     
     
     override func viewDidLoad() {
         
-        imgProductoComplemento.image = producto?.imagenProducto
+        let botonSiguiente = UIBarButtonItem(title: "Confirmar", style: .done, target: self, action: #selector(confirmar))
         
-        if switchAzucar.isOn == true
-        {
-            tapperAzucar.isHidden = false
-            
-            
-            let nombreComplemento = "Azucar"
-            
-            complementos.append(Complemento(nombre: nombreComplemento, cantidad: tapperAzucar.value))
-            
-            lblCantidadAzucar.text = tapperAzucar.value.description
-            
-            
-        }
+        self.navigationItem.rightBarButtonItem = botonSiguiente
+        
+        imgProductoComplemento.image = producto?.imagenProducto
+        lblPrecioProducto.text = producto?.precio?.description
+        
+        
+        
+      
     }
     
+    @objc func confirmar(){
+        performSegue(withIdentifier: "goBackProductos", sender: self)
+    }
     
 }
